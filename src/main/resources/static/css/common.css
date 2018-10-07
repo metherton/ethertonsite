@@ -3,6 +3,14 @@ html, body {
     background-color: whitesmoke;
     font-family: "Helvetica Neue", Arial;
 }
+
+.login-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .flex-container {
     height: 100%;
     display: flex;
