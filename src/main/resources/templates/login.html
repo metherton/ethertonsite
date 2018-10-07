@@ -20,9 +20,10 @@
                 <section th:if="${param.logout}">
                     You have been logged out.
                 </section>
-                <section><input placeholder="User name" type="text" name="username"/></section>
-                <section><input placeholder="Password" type="password" name="password"/></section>
-                <section><input type="submit" value="Sign In"/></section>
+                <section><input class="form-control" placeholder="User name" type="text" name="username"/></section>
+                <section><input class="form-control" placeholder="Password" type="password" name="password"/></section>
+                <section class="checkbox"><input type="checkbox" name="remember"/>&nbsp;Remember me</section>
+                <section class="submit"><input class="form-control" type="submit" value="Sign In"/></section>
             </form>
           </section>
       </section>
