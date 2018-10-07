@@ -4,21 +4,26 @@
     <head>
         <title>Spring Security Example </title>
         <link rel="stylesheet" th:href="@{/css/cssreset.css}" />
-        <link rel="stylesheet" th:href="@{/css/site.css}" />
+        <link rel="stylesheet" th:href="@{/css/common.css}" />
+        <link rel="stylesheet" media="screen and (min-width: 56.25em)" th:href="@{/css/widescreen.css}" />
+        <link rel="stylesheet" media="screen and (max-width: 37.5em)" th:href="@{/css/smallscreen.css}" />
     </head>
     <body>
-      <div class="flex-container">
-        <div th:if="${param.error}">
-            Invalid username and password.
-        </div>
-        <div th:if="${param.logout}">
-            You have been logged out.
-        </div>
-        <form class="login" th:action="@{/login}" method="post">
-            <div><label> User Name : <input type="text" name="username"/> </label></div>
-            <div><label> Password: <input type="password" name="password"/> </label></div>
-            <div><input type="submit" value="Sign In"/></div>
-        </form>
-      </div>
+      <section class="login-container">
+          <section class="login-form">
+            <header>Please sign in</header>
+            <form class="login" th:action="@{/login}" method="post">
+                <section th:if="${param.error}">
+                    Invalid username and password.
+                </section>
+                <section th:if="${param.logout}">
+                    You have been logged out.
+                </section>
+                <section><input placeholder="User name" type="text" name="username"/></section>
+                <section><input placeholder="Password" type="password" name="password"/></section>
+                <section><input type="submit" value="Sign In"/></section>
+            </form>
+          </section>
+      </section>
     </body>
 </html>

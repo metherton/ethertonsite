@@ -1,14 +1,12 @@
 html, body {
     height: 100%;
+    background-color: whitesmoke;
+
 }
-.flex-container {
+.login-container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-form.login {
-    padding: 10em;
-    box-sizing: border-box;
-    border: 1px solid lightgrey;
-}
+
