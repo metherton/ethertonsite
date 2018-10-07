@@ -8,5 +8,7 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-
+form.login input {
+    width: 80%;
+}
 
