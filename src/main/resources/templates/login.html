@@ -14,10 +14,10 @@
           <section class="login-form">
             <header>Please sign in</header>
             <form class="login" th:action="@{/login}" method="post">
-                <section th:if="${param.error}">
-                    Invalid username and password.
+                <section class="error" th:if="${param.error}">
+                    Invalid username and/or password.
                 </section>
-                <section th:if="${param.logout}">
+                <section class="logged-out" th:if="${param.logout}">
                     You have been logged out.
                 </section>
                 <section><input class="form-control" placeholder="User name" type="text" name="username"/></section>

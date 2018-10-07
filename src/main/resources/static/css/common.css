@@ -4,6 +4,16 @@ html, body {
     font-family: "Helvetica Neue", Arial;
 }
 
+.error {
+    padding: 1em;
+    color: red;
+}
+
+.logged-out {
+    padding: 1em;
+    color: green;
+}
+
 .login-container {
     height: 100%;
     display: flex;
