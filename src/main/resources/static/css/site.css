@@ -1,6 +1,3 @@
-body {
-    background-color: red;
-}
 html, body {
     height: 100%;
 }
@@ -9,4 +6,9 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+form.login {
+    padding: 10em;
+    box-sizing: border-box;
+    border: 1px solid lightgrey;
 }
