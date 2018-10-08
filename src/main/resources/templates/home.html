@@ -7,6 +7,19 @@
     <body>
         <h1>Welcome!</h1>
 
+        <script>
+
+            fetch(`http://www.martinetherton.com/routeAdvices`)
+                    .then((response) => response.text())
+            .then((responseText) => {
+                this.render(JSON.parse(responseText));
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+        </script>
+
         <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
     </body>
 </html>
