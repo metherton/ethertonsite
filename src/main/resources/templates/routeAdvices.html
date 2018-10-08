@@ -7,19 +7,5 @@
     <body>
         <h1>Route Advices!</h1>
 
-        <script>
-
-            fetch(`http://www.martinetherton.com/routeAdvices`)
-                    .then((response) => response.text())
-            .then((responseText) => {
-                this.render(JSON.parse(responseText));
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-
-        </script>
-
-
     </body>
 </html>

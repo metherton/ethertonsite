@@ -9,13 +9,14 @@
 
         <script>
 
-            fetch(`http://www.martinetherton.com/routeAdvices`)
+            fetch(`http://localhost:8080/routeAdvices`)
                     .then((response) => response.text())
             .then((responseText) => {
-                this.render(JSON.parse(responseText));
+                //this.render(JSON.parse(responseText));
+                console.log(responseText);
             })
             .catch((error) => {
-                console.error(error);
+                console.log(error);
             });
 
         </script>
