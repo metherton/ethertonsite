@@ -7,20 +7,8 @@
     <body>
         <h1>Welcome!</h1>
 
-        <script>
 
-            fetch(`http://localhost:8080/routeAdvices`)
-                    .then((response) => response.text())
-            .then((responseText) => {
-                //this.render(JSON.parse(responseText));
-                console.log(responseText);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
 
-        </script>
-
-        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+        <p>Click <a th:href="@{/routeAdvicePage}">here</a> to see a greeting.</p>
     </body>
 </html>

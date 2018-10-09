@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Spring Security Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Route advices!</h1>
+
+
+        <script>
+
+            fetch(`http://localhost:8080/routeAdvices`)
+                    .then((response) => response.text())
+            .then((responseText) => {
+                console.log('responsetext', responseText);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+
+        </script>
+        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+    </body>
+</html>
