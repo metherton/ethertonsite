@@ -7,7 +7,23 @@
     </head>
     <body>
 
+    <script>
 
+        fetch(`http://localhost:8080/user`)
+                .then((response) => response.text())
+        .then((responseText) => {
+            console.log('responsetext', responseText);
+
+        //       location.href = '/login';
+
+        })
+        .catch((error) => {
+            console.error(error);
+
+        });
+
+
+    </script>
 
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
         <form th:action="@{/logout}" method="post">

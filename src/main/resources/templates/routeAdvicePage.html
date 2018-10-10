@@ -10,13 +10,17 @@
 
         <script>
 
-            fetch(`http://localhost:8080/routeAdvices`)
+            fetch(`http://localhost:8080/user`)
                     .then((response) => response.text())
             .then((responseText) => {
                 console.log('responsetext', responseText);
+
+            //       location.href = '/login';
+
             })
             .catch((error) => {
                 console.error(error);
+
             });
 
 

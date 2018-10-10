@@ -7,7 +7,28 @@
     <body>
         <h1>Welcome!</h1>
 
+        <script>
 
+            fetch(`http://localhost:8080/user`)
+                    .then((response) => {
+                if (response.status >= 400) {
+                location.href = '/login';
+            }
+                response.text();
+            })
+            .then((responseText) =>
+                console.log('responsetext', responseText)
+
+            //       location.href = '/login';
+
+            )
+            .catch((error) => {
+                console.error(error);
+//            location.href = '/login';
+            });
+
+
+        </script>
 
         <p>Click <a th:href="@{/routeAdvicePage}">here</a> to see a greeting.</p>
     </body>

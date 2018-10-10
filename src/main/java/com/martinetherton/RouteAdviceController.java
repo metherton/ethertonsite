@@ -2,20 +2,17 @@ package com.martinetherton;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by martin on 09/07/18.
  */
-@Controller
+@RestController
 public class RouteAdviceController {
 
 
    // @RequestMapping("/users")
-    @RequestMapping(value="/routeAdvices", method= RequestMethod.GET)
+    @RequestMapping(value="/api/routeAdvices", method= RequestMethod.GET)
     @ResponseBody
     public Iterable<Object> getUsers() {
 //        List<User> users = new ArrayList<>();
@@ -29,5 +26,7 @@ public class RouteAdviceController {
             return null;
         }
     }
+
+
 
 }
