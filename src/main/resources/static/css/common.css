@@ -4,6 +4,14 @@ html, body {
     font-family: "Helvetica Neue", Arial;
 }
 
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
 .error {
     padding: 1em;
     color: red;
