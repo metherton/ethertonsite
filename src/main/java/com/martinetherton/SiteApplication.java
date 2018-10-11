@@ -15,7 +15,7 @@ public class SiteApplication {
 		SpringApplication.run(SiteApplication.class, args);
 	}
 
-	@RequestMapping("/user")
+	@RequestMapping("/api/user")
 	public Principal user(Principal user) {
 		return user;
 	}
