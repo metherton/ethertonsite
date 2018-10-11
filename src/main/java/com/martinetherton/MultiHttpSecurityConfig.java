@@ -62,7 +62,7 @@ public class MultiHttpSecurityConfig {
         protected void configure(HttpSecurity http) throws Exception {
             http
             .authorizeRequests()
-            .antMatchers("/css/**", "/", "/home").permitAll()
+            .antMatchers("/css/**", "/", "/home", "/*.js").permitAll()
             .anyRequest().authenticated()
             .and()
             .formLogin()
