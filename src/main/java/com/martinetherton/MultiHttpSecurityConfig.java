@@ -27,52 +27,52 @@ public class MultiHttpSecurityConfig {
         return manager;
     }
 
+//    @Configuration
+//    @Order(1)
+//    public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
+//
+//        @Autowired
+//        private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+//
+//        @Autowired
+//        private MySavedRequestAwareAuthenticationSuccessHandler
+//                authenticationSuccessHandler;
+//
+//        protected void configure(HttpSecurity http) throws Exception {
+//            http
+//            .csrf().disable()
+//            .exceptionHandling()
+//            .authenticationEntryPoint(restAuthenticationEntryPoint)
+//            .and()
+//            .authorizeRequests()
+//            .antMatchers("/api/**").authenticated()
+//            .and()
+//            .formLogin()
+//            .successHandler(authenticationSuccessHandler)
+//            .failureHandler(new SimpleUrlAuthenticationFailureHandler())
+//            .and()
+//            .logout();
+//        }
+//    }
+
     @Configuration
-    public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
+    public static class FormLoginWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
-        @Autowired
-        private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
-
-        @Autowired
-        private MySavedRequestAwareAuthenticationSuccessHandler
-                authenticationSuccessHandler;
-
+        @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
-            .csrf().disable()
-            .exceptionHandling()
-            .authenticationEntryPoint(restAuthenticationEntryPoint)
-            .and()
             .authorizeRequests()
-            .antMatchers("/api/**").authenticated()
+            .antMatchers("/css/**", "/", "/home").permitAll()
+            .anyRequest().authenticated()
             .and()
             .formLogin()
-            .successHandler(authenticationSuccessHandler)
-            .failureHandler(new SimpleUrlAuthenticationFailureHandler())
+            .loginPage("/login")
+            .permitAll()
             .and()
-            .logout();
+            .logout()
+            .permitAll();
+
         }
     }
-
-        @Configuration
-        @Order(1)
-        public static class FormLoginWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
-
-            @Override
-            protected void configure(HttpSecurity http) throws Exception {
-                http
-                .authorizeRequests()
-                .antMatchers("/css/**", "/", "/home").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
-                .logout()
-                .permitAll();
-
-            }
-        }
 
 }

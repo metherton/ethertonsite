@@ -7,19 +7,19 @@
     <body>
         <h1>Welcome!</h1>
 
-        <script>
+        <!--<script>-->
 
-            fetch(`http://localhost:8080/api/user`)
-            .then((response) => response.text())
-            .then((responseText) =>
-              JSON.parse(responseText)
-            )
-            .catch((error) => {
-                console.error(error);
-            });
+            <!--fetch(`http://localhost:8080/api/user`)-->
+            <!--.then((response) => response.text())-->
+            <!--.then((responseText) =>-->
+              <!--JSON.parse(responseText)-->
+            <!--)-->
+            <!--.catch((error) => {-->
+                <!--console.error(error);-->
+            <!--});-->
 
 
-        </script>
+        <!--</script>-->
 
         <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
     </body>
