@@ -1,0 +1,31 @@
+<htmL>
+<head>
+  <script src="me-one-name-study.js"></script>
+</head>
+
+<body>
+
+
+
+  <me-one-name-study id="ons"></me-one-name-study>
+
+
+  <script>
+    function setUsers(users) {
+      const $ons = document.getElementById("ons");
+      $ons.users = users;
+    }
+
+    fetch(`users.json`)
+            .then((response) => response.text())
+    .then((responseText) => {
+      setUsers(JSON.parse(responseText));
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
+  </script>
+
+</body>
+</htmL>
