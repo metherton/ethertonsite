@@ -11,13 +11,14 @@ class MeBiography extends HTMLElement {
         p {
           color: red;
         }
-        .martin::slotted(h1) {
-          color: green;
+        .martin ::slotted(h3)  {
+          color: blue;
         }
       </style>
       <div class="martin">
-        <slot name="bla">Me default Biography</slot>      
+        <slot name="title">Me default Biography</slot>      
         <slot>should be replaced</slot>
+        <p>should be red</p>
       </div>
     `;
 
