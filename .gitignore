@@ -28,3 +28,5 @@ mvnw
 mvnw.cmd
 site.iml
 .mvn/
+
+./node_modules/

@@ -1,0 +1,22 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metherton/ethertonsite.git"
+  },
+  "author": "Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metherton/ethertonsite/issues"
+  },
+  "homepage": "https://github.com/metherton/ethertonsite#readme",
+  "dependencies": {
+    "web-component-tester": "6.8.0"
+  }
+}
