@@ -1,11 +1,12 @@
 class MeBiography extends HTMLElement {
   constructor() {
     super();
+    this._root = this.attachShadow({mode: 'open'});
     this.awesomest = null;
   }
   connectedCallback() {
     this.awesomest = true;
-    this.innerHTML = `
+    this._root.innerHTML = `
       <style>
         p {
           color: red;
