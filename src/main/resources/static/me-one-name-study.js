@@ -1,11 +1,13 @@
 
+
+
 class MeOneNameStudy extends HTMLElement {
 
   constructor() {
     super();
     this._root = this.attachShadow({"mode": "open"});
     this._$birthsButton = null;
-  //  this._$persons = null;
+    this._$persons = null;
   }
 
   connectedCallback() {
@@ -15,14 +17,15 @@ class MeOneNameStudy extends HTMLElement {
           color: red;
         }
       </style>
+    
       <script src="me-one-name-study-births.js"></script>
       <p>Me One Name Study</p>
       <button id="births">Show Births</button>
-      <me-one-name-study-births id="births"></me-one-name-study-births>
-      <!--<section id="persons"></section>-->
+      <me-one-name-study-births id="ons"></me-one-name-study-births>
+      <section id="persons"></section>
     `;
 
-    // this._$persons = this._root.querySelector('#persons');
+     this._$persons = this._root.querySelector('#persons');
 
 
 
@@ -34,7 +37,8 @@ class MeOneNameStudy extends HTMLElement {
     //   .catch((error) => {
     //     console.error(error);
     //   });
-    
+
+    this._$ons = this._root.querySelector('#ons');
     this._$birthsButton = this._root.querySelector('#births');
     this._$birthsButton.addEventListener('click', () => {
       fetch(`births.json`)
@@ -45,18 +49,29 @@ class MeOneNameStudy extends HTMLElement {
         .catch((error) => {
           console.error(error);
         });
-      
+
     });
 
   }
 
   setBirths(births) {
-    const $births = document.getElementById("births");
-    $ons.births = births;
-  }
-  
-  render(userData) {
+//    const $births = document.getElementById("births");
+    //const $ons = document.getElementById("persons");
 
+    this.births = births;
+    this._$ons.births = births;
+    this.renderBirths();
+  }
+
+  renderBirths() {
+    for (let i = 0; i < this.births.length; i += 1) {
+      const user = document.createElement('p');
+      user.innerText = this.births[i].firstName;
+      this._$persons.appendChild(user);
+    }
+  }
+
+  render(userData) {
     for (let i = 0; i < userData.length; i += 1) {
       const user = document.createElement('p');
       user.innerText = userData[i].firstName;
