@@ -8,6 +8,7 @@ class MeOneNameStudy extends HTMLElement {
     this._root = this.attachShadow({"mode": "open"});
     this._$birthsButton = null;
     this._$persons = null;
+    this._$ons = null;
   }
 
   connectedCallback() {
@@ -26,6 +27,7 @@ class MeOneNameStudy extends HTMLElement {
     `;
 
      this._$persons = this._root.querySelector('#persons');
+     this._$ons = this._root.querySelector('#ons');
 
 
 
@@ -38,7 +40,7 @@ class MeOneNameStudy extends HTMLElement {
     //     console.error(error);
     //   });
 
-    this._$ons = this._root.querySelector('#ons');
+    // this._$ons = this._root.querySelector('#ons');
     this._$birthsButton = this._root.querySelector('#births');
     this._$birthsButton.addEventListener('click', () => {
       fetch(`births.json`)
@@ -60,7 +62,7 @@ class MeOneNameStudy extends HTMLElement {
 
     this.births = births;
     this._$ons.births = births;
-    this.renderBirths();
+ //   this.renderBirths();
   }
 
   renderBirths() {

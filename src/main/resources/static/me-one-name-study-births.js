@@ -35,18 +35,18 @@ class MeOneNameStudyBirths extends HTMLElement {
 
   render(userData) {
 
-    for (let i = 0; i < userData.length; i += 1) {
+    for (let i = 0; i < this._births.length; i += 1) {
       const user = document.createElement('p');
-      user.innerText = userData[i].firstName;
+      user.innerText = this._births.firstName;
       this._$persons.appendChild(user);
     }
     // this._$persons.innerText = 'hello';
   }
 
   renderBirths() {
-    for (let i = 0; i < this._users.length; i += 1) {
+    for (let i = 0; i < this._births.length; i += 1) {
       const user = document.createElement('p');
-      user.innerText = this._users[i].firstName;
+      user.innerText = this._births[i].firstName;
       this._$persons.appendChild(user);
     }
   }
@@ -64,4 +64,4 @@ class MeOneNameStudyBirths extends HTMLElement {
 
 }
 
-window.customElements.define('me-one-name-study', MeOneNameStudy);
+window.customElements.define('me-one-name-study-births', MeOneNameStudyBirths);
