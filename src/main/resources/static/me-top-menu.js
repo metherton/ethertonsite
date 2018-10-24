@@ -17,13 +17,26 @@ class MeTopMenu extends HTMLElement {
             text-decoration: none;
             color: white;
           }
-          :host([theme="black"]) .menu-bar ::slotted(span) {
-            color: white;
+          :host([theme="black"]) .menu-bar {
+            
           }
+
+          /*.title-slot::slotted(span) {*/
+            /*font-size: 4em;*/
+            /*color: red;*/
+          /*}*/
+          
+          .title-slot::slotted(span) {
+            /*font-size: 4em;*/
+            color: blue;
+          }
+          /*span {*/
+            /*font-size: 4em;*/
+          /*}*/
          
       </style>
       <nav class="menu-bar">
-        <slot name="site-name">Site name</slot>
+        <slot class="title-slot" name="site-name">Site name</slot>
         <a href="/home">Home</a>
         <a href="/about-me">About Me</a>
         <a href="/one-name-study">One Name Study</a>

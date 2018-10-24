@@ -67,7 +67,7 @@ class RwSlideMenu extends HTMLElement {
                 }
                 .content-slot::slotted(a) {
                     display: block;
-                    font-size: 1.2em;
+                    font-size: 3.2em;
                     text-decoration: none;
                     line-height: 2.5em;
                     padding: 0.5em;
