@@ -7,9 +7,20 @@
         <link rel="stylesheet" th:href="@{/css/common.css}" />
         <link rel="stylesheet" media="screen and (min-width: 56.25em)" th:href="@{/css/widescreen.css}" />
         <link rel="stylesheet" media="screen and (max-width: 37.5em)" th:href="@{/css/smallscreen.css}" />
+        <script src="me-top-menu.js"></script>
+
+        <style>
+            me-top-menu {
+                --menu-width: 100%;
+            }
+        </style>
+
     </head>
     <body>
-        <h1>martinetherton.com</h1>
+        <!--<h1>martinetherton.com</h1>-->
+        <me-top-menu theme="black">
+            <span slot="site-name">Mep</span>
+        </me-top-menu>
 
         <section>
             <h2><a href="/about-me">About Me</a></h2>
