@@ -17,9 +17,7 @@ class MeTopMenu extends HTMLElement {
             text-decoration: none;
             color: white;
           }
-          :host([theme="black"]) .menu-bar {
-            
-          }
+
 
           /*.title-slot::slotted(span) {*/
             /*font-size: 4em;*/
