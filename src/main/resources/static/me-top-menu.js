@@ -11,8 +11,6 @@ class MeTopMenu extends HTMLElement {
           .menu-bar {
             display: flex;
             justify-content: space-between;
-            padding-left: 2%;
-            padding-right: 2%;
           }
           :host([theme="black"]) .menu-bar {
               background-color: black;
