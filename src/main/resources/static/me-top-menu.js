@@ -32,7 +32,7 @@ class MeTopMenu extends HTMLElement {
 
           nav a {
             display: inline-block;
-            width: 10%;
+            width: 15%;
           }
 
           /*.title-slot::slotted(span) {*/
