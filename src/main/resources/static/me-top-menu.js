@@ -28,9 +28,10 @@ class MeTopMenu extends HTMLElement {
               width: var(--menu-width, 100%);
           }
           :host([theme="navy"]) .menu-bar a {
-            font-size: 1em;
+            font-size: 0.8em;
             text-decoration: none;
             color: white;
+            font-weight: bold;
           }
 
           /*nav > a {*/
@@ -47,9 +48,7 @@ class MeTopMenu extends HTMLElement {
             /*font-size: 4em;*/
             color: white;
           }
-          /*span {*/
-            /*font-size: 4em;*/
-          /*}*/
+
           .links {
             display: inline-block;
             width: 60%;
@@ -61,17 +60,31 @@ class MeTopMenu extends HTMLElement {
             text-align: center;
           }
           
+          .more {
+            text-align: center;
+          }
          
-         
+          .menu-layout {
+            display: inline-block;
+            width: 90%;
+          }
+          
+          .search {
+            display: inline-block;
+            width: 5%;
+          }
+          
       </style>
       <nav class="menu-bar">
-        <slot class="title-slot" name="site-name">Site name</slot>
-        <span class="links">
-          <a class="link" href="/home">Home</a>
-          <a class="link" href="/about-me">About Me</a>
-          <a class="more" href="/more">More</a>
+        <span class="menu-layout">
+          <slot class="title-slot" name="site-name">Site name</slot>
+          <span class="links">
+            <a class="link" href="/home">Home</a>
+            <a class="link" href="/about-me">About Me</a>
+            <a class="more" href="/more">More</a>
+          </span>        
         </span>
-        <a href="/search">S</a>
+        <a class="search" href="/search">S</a>
       </nav>
     `;
 
