@@ -51,7 +51,7 @@ class MeTopMenu extends HTMLElement {
 
           .links {
             display: inline-block;
-            width: 75%;
+            width: 84%;
           }
          
           .link {
@@ -67,12 +67,12 @@ class MeTopMenu extends HTMLElement {
          
           .menu-layout {
             display: inline-block;
-            width: 95%;
+            width: 98%;
           }
           
           .search {
             display: inline-block;
-            width: 5%;
+            width: 2%;
           }
           
       </style>
