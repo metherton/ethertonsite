@@ -62,7 +62,7 @@ class MeTopMenu extends HTMLElement {
           
           .more {
             text-align: center;
-            width: 40%;
+            width: 30%;
             display: inline-block;
           }
          
