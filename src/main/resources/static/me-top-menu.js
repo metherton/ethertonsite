@@ -10,6 +10,7 @@ class MeTopMenu extends HTMLElement {
       <style>
           .menu-bar {
             display: flex;
+            justify-content: space-between;
           }
           :host([theme="black"]) .menu-bar {
               background-color: black;
@@ -32,7 +33,7 @@ class MeTopMenu extends HTMLElement {
 
           nav a {
             display: inline-block;
-            width: 15%;
+            /*width: 15%;*/
           }
 
           /*.title-slot::slotted(span) {*/
