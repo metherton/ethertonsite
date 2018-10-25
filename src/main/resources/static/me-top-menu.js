@@ -11,6 +11,8 @@ class MeTopMenu extends HTMLElement {
           .menu-bar {
             display: flex;
             justify-content: space-between;
+            padding-left: 2%;
+            padding-right: 2%;
           }
           :host([theme="black"]) .menu-bar {
               background-color: black;
@@ -31,10 +33,10 @@ class MeTopMenu extends HTMLElement {
             color: white;
           }
 
-          nav a {
-            display: inline-block;
-            /*width: 15%;*/
-          }
+          /*nav > a {*/
+            /*display: inline-block;*/
+            /*!*width: 15%;*!*/
+          /*}*/
 
           /*.title-slot::slotted(span) {*/
             /*font-size: 4em;*/
@@ -48,13 +50,27 @@ class MeTopMenu extends HTMLElement {
           /*span {*/
             /*font-size: 4em;*/
           /*}*/
+          .links {
+            display: inline-block;
+            width: 60%;
+          }
+         
+          .link {
+            display: inline-block;
+            width: 20%;
+          }
+          
+         
          
       </style>
       <nav class="menu-bar">
         <slot class="title-slot" name="site-name">Site name</slot>
-        <a href="/home">Home</a>
-        <a href="/about-me">About Me</a>
-        <a href="/more">More</a>
+        <span class="links">
+          <a class="link" href="/home">Home</a>
+          <a class="link" href="/about-me">About Me</a>
+          <a class="more" href="/more">More</a>
+        </span>
+        <a href="/search">S</a>
       </nav>
     `;
 
