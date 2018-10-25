@@ -8,12 +8,15 @@ class MeTopMenu extends HTMLElement {
     this.awesomest = true;
     this._root.innerHTML = `
       <style>
+          .menu-bar {
+            display: flex;
+          }
           :host([theme="black"]) .menu-bar {
               background-color: black;
               width: var(--menu-width, 100%);
           }
           :host([theme="black"]) .menu-bar a {
-            font-size: 1.2em;
+            font-size: 1em;
             text-decoration: none;
             color: white;
           }
@@ -22,9 +25,14 @@ class MeTopMenu extends HTMLElement {
               width: var(--menu-width, 100%);
           }
           :host([theme="navy"]) .menu-bar a {
-            font-size: 1.2em;
+            font-size: 1em;
             text-decoration: none;
             color: white;
+          }
+
+          nav a {
+            display: inline-block;
+            width: 10%;
           }
 
           /*.title-slot::slotted(span) {*/
@@ -34,7 +42,7 @@ class MeTopMenu extends HTMLElement {
           
           .title-slot::slotted(span) {
             /*font-size: 4em;*/
-            color: blue;
+            color: white;
           }
           /*span {*/
             /*font-size: 4em;*/
