@@ -57,7 +57,7 @@ class MeTopMenu extends HTMLElement {
          
           .link {
             display: inline-block;
-            width: 25%;
+            width: 30%;
           }
           
          
