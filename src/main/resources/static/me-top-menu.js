@@ -54,7 +54,7 @@ class MeTopMenu extends HTMLElement {
         <slot class="title-slot" name="site-name">Site name</slot>
         <a href="/home">Home</a>
         <a href="/about-me">About Me</a>
-        <a href="/one-name-study">One Name Study</a>
+        <a href="/more">More</a>
       </nav>
     `;
 
