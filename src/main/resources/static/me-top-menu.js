@@ -49,7 +49,7 @@ class MeTopMenu extends HTMLElement {
 
           .links {
             display: inline-block;
-            width: 84%;
+            width: 80%;
           }
          
           .link {
@@ -60,7 +60,7 @@ class MeTopMenu extends HTMLElement {
           
           .more {
             text-align: center;
-            width: 30%;
+            width: 35%;
             display: inline-block;
           }
          
