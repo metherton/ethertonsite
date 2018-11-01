@@ -18,5 +18,8 @@
   "homepage": "https://github.com/metherton/ethertonsite#readme",
   "dependencies": {
     "web-component-tester": "6.8.0"
+  },
+  "devDependencies": {
+    "nightwatch": "0.9.21"
   }
 }
