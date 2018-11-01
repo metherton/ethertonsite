@@ -1,5 +1,5 @@
 module.exports = {
-  'Demo test' : function (browser) {
+  'Home page test' : function (browser) {
     browser
       .url(browser.launchUrl)
       .waitForElementPresent('title', 1000)

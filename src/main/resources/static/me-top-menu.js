@@ -42,6 +42,11 @@ class MeTopMenu extends HTMLElement {
             /*color: red;*/
           /*}*/
           
+          nav {
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+          }
+          
           .title-slot::slotted(span) {
             /*font-size: 4em;*/
             color: white;
