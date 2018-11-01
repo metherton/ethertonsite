@@ -43,8 +43,7 @@ class MeTopMenu extends HTMLElement {
           /*}*/
           
           nav {
-            padding-top: 0.6em;
-            padding-bottom: 0.6em;
+            height: 2.6em
           }
           
           .title-slot::slotted(span) {
@@ -53,43 +52,65 @@ class MeTopMenu extends HTMLElement {
           }
 
           .links {
-            display: inline-block;
-            width: 80%;
+            /*display: inline-block;*/
+            display: flex;
+            width: 100%;
+            height: 100%;
           }
          
-          .link {
-            display: inline-block;
-            width: 30%;
+          .title {
+            /*display: inline-block;*/
+            /*width: 30%;*/
             text-align: center;
+            color: white;
+            width: 20%;
+          }
+  
+          .link {
+          /*display: inline-block;*/
+          /*width: 30%;*/
+            text-align: center;
+            color: white;
+            width: 20%;
           }
           
-          .more {
-            text-align: center;
-            width: 35%;
-            display: inline-block;
-          }
+          /*.more {*/
+            /*text-align: center;*/
+            /*width: 35%;*/
+            /*!*display: inline-block;*!*/
+          /*}*/
          
           .menu-layout {
-            display: inline-block;
-            width: 98%;
+            /*display: inline-block;*/
+            width: 100%;
+            height: 100%;
           }
           
-          .search {
-            display: inline-block;
-            width: 2%;
-          }
+          /*.search {*/
+            /*!*display: inline-block;*!*/
+            /*width: 2%;*/
+          /*}*/
           
       </style>
       <nav class="menu-bar">
-        <span class="menu-layout">
-          <slot class="title-slot" name="site-name">Site name</slot>
-          <span class="links">
-            <a class="link" href="/home">Home</a>
-            <a class="link" href="/about-me">About Me</a>
-            <a class="more" href="/more">More</a>
-          </span>        
-        </span>
-        <a class="search" href="/search">S</a>
+        <div class="menu-layout">
+          <!--<slot class="title-slot" name="site-name">Site name</slot>-->
+          <div class="links">
+            <div class="title">
+              Mep
+            </div>
+            <div class="link">
+              <a class="link" href="/home">Home</a>          
+            </div>
+            <div class="link">
+              <a class="link" href="/about-me">About Me</a>          
+            </div>
+            <div class="link">
+              <a class="more" href="/more">More</a>          
+            </div>
+          </div>        
+        </div>
+        <!--<a class="search" href="/search">S</a>-->
       </nav>
     `;
 
