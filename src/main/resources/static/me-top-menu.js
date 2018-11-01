@@ -61,7 +61,9 @@ class MeTopMenu extends HTMLElement {
           .title {
             /*display: inline-block;*/
             /*width: 30%;*/
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             width: 20%;
           }
@@ -69,11 +71,16 @@ class MeTopMenu extends HTMLElement {
           .link {
           /*display: inline-block;*/
           /*width: 30%;*/
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             width: 20%;
           }
           
+          a.link, a.more {
+            width: 100%;
+          }
           /*.more {*/
             /*text-align: center;*/
             /*width: 35%;*/
@@ -97,16 +104,16 @@ class MeTopMenu extends HTMLElement {
           <!--<slot class="title-slot" name="site-name">Site name</slot>-->
           <div class="links">
             <div class="title">
-              Mep
+              <div class="text">Mep</div>
             </div>
             <div class="link">
-              <a class="link" href="/home">Home</a>          
+              <div class="text"><a class="link" href="/home">Home</a></div>          
             </div>
             <div class="link">
-              <a class="link" href="/about-me">About Me</a>          
+              <div class="text"><a class="link" href="/about-me">About Me</a></div>          
             </div>
             <div class="link">
-              <a class="more" href="/more">More</a>          
+              <div class="text"><a class="more" href="/more">More</a></div>          
             </div>
           </div>        
         </div>
