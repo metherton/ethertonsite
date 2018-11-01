@@ -23,7 +23,7 @@
       "selenium_port"  : 9515,
       "selenium_host"  : "localhost",
       "default_path_prefix" : "",
-      "launch_url" : "http://localhost",
+      "launch_url" : "http://localhost:8080",
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions" : {
