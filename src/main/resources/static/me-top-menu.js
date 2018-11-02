@@ -80,7 +80,9 @@ class MeTopMenu extends HTMLElement {
           }
           
           a.link, a.more {
+            display: inline-block;
             width: 100%;
+            height: 100%;
           }
           /*.more {*/
             /*text-align: center;*/
@@ -112,6 +114,9 @@ class MeTopMenu extends HTMLElement {
             </div>
             <div class="link">
               <div class="text"><a class="link" href="/about-me">About Me</a></div>          
+            </div>
+            <div class="link">
+              <div class="text"><a class="link" href="/one-name-study">ONS</a></div>          
             </div>
             <div class="link">
               <div class="text"><a class="more" href="/more">More</a></div>          
