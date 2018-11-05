@@ -20,7 +20,7 @@ class MeOneNameStudy extends HTMLElement {
         header {
           color: white;
           background: navy;
-          font-size: 1.5em;
+          font-size: 1.5rem;
         }
       </style>
     
