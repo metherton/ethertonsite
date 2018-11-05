@@ -9,7 +9,15 @@ module.exports = {
       this.assert.ok(title.includes('martinetherton.com Home Page'));
     });
 
+    
 
     browser.end();
+  },
+  'Navigate to about us' : function (client) {
+    var home = client.page.home();
+    home.navigate().shadowRoot(home)
+      .click('@aboutUsLink');
+
+    client.end();
   }
 };

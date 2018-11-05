@@ -17,9 +17,15 @@ class MeOneNameStudy extends HTMLElement {
         p {
           color: red;
         }
+        header {
+          color: white;
+          background: navy;
+          font-size: 2em;
+        }
       </style>
     
       <script src="me-one-name-study-births.js"></script>
+      <header>Etherton One Name Study</header>
       <p>Me One Name Study</p>
       <button id="births">Show Births</button>
       <me-one-name-study-births id="ons"></me-one-name-study-births>

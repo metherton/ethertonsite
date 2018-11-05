@@ -20,6 +20,12 @@
     "web-component-tester": "6.8.0"
   },
   "devDependencies": {
+    "commitizen": "3.0.4",
     "nightwatch": "0.9.21"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
