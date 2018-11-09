@@ -21,6 +21,8 @@ class MeOneNameStudy extends HTMLElement {
           color: white;
           background: navy;
           font-size: 1.5rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
         }
       </style>
     
