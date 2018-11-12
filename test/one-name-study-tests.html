@@ -23,13 +23,14 @@
     })
 
     test('callback from search event called', function() {
-      var createElementSpy = sinon.spy(document, 'createElement');
+      const createElementSpy = sinon.spy(document, 'createElement');
 
-      var event = new CustomEvent('search', {detail: {type: 'births'}});
+
+      const event = new CustomEvent('search', {detail: {type: 'births'}});
 
       el.dispatchEvent(event);
 
-      assert(createElementSpy.calledOnce);
+      assert(createElementSpy.withArgs('me-one-name-study-births').calledOnce);
       createElementSpy.restore();
     });
   });
