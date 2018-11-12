@@ -28,6 +28,7 @@ class MeOneNameStudy extends HTMLElement {
     
       <script src="me-one-name-study-births.js"></script>
       <header>Etherton One Name Study</header>
+      <me-one-name-study-search id="search"></me-one-name-study-search>
       <p>Me One Name Study</p>
       <button id="births">Show Births</button>
       <me-one-name-study-births id="ons"></me-one-name-study-births>
@@ -37,6 +38,10 @@ class MeOneNameStudy extends HTMLElement {
      this._$persons = this._root.querySelector('#persons');
      this._$ons = this._root.querySelector('#ons');
 
+      this.addEventListener("search", (event) => {
+        
+        const onsBirths = document.createElement('me-one-name-study-births');
+      });     
 
 
     // fetch(`http://www.martinetherton.com:9000/users`)
