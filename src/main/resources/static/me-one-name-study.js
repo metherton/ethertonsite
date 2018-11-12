@@ -26,25 +26,23 @@ class MeOneNameStudy extends HTMLElement {
         }
       </style>
     
-      <script src="me-one-name-study-births.js"></script>
+  
       <header>Etherton One Name Study</header>
-      <me-one-name-study-search id="search"></me-one-name-study-search>
-      <p>Me One Name Study</p>
-      <button id="births">Show Births</button>
+      <!--<p>Me One Name Study</p>-->
+      <!--<button id="births">Show Births</button>-->
      
-      <me-one-name-study-births id="ons"></me-one-name-study-births>
+      <!--<me-one-name-study-births id="ons"></me-one-name-study-births>-->
+      <me-one-name-study-search id="search"></me-one-name-study-search>
       <section id="results"></section>
     `;
 
      this._$persons = this._root.querySelector('#persons');
      this._$ons = this._root.querySelector('#ons');
 
-      this.addEventListener("search", (event) => {
-
+      this.addEventListener('search', (event) => {
         const onsBirths = document.createElement(`me-one-name-study-${event.detail.type}`);
         const container = this._root.querySelector('#results');
         container.appendChild(onsBirths);
-
       });
 
 
@@ -58,18 +56,18 @@ class MeOneNameStudy extends HTMLElement {
     //   });
 
     // this._$ons = this._root.querySelector('#ons');
-    this._$birthsButton = this._root.querySelector('#births');
-    this._$birthsButton.addEventListener('click', () => {
-      fetch(`births.json`)
-        .then((response) => response.text())
-        .then((responseText) => {
-          this.setBirths(JSON.parse(responseText));
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-
-    });
+    // this._$birthsButton = this._root.querySelector('#births');
+    // this._$birthsButton.addEventListener('click', () => {
+    //   fetch(`births.json`)
+    //     .then((response) => response.text())
+    //     .then((responseText) => {
+    //       this.setBirths(JSON.parse(responseText));
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //     });
+    //
+    // });
 
   }
 

@@ -11,14 +11,22 @@ class MeOneNameStudySearch extends HTMLElement {
       <style>
       </style>
       <section>
-      
+        <input id="searchBtn" type="button" value="Search">
       </section>
 
     `;
 
     // this._$ons = this._root.querySelector('#ons');
-    this._$birthsButton = this._root.querySelector('#births');
+    this._$searchButton = this._root.querySelector('#searchBtn');
+    this._$searchButton.addEventListener('click', (event) => {
+    //    this.dispatchEvent(new CustomEvent('search', {detail: {type: 'births', composed: true}}));
+      this.dispatchEvent(new CustomEvent('search', {bubbles: true, composed: true, detail: {type: 'births'}}));
+    });
 
+    // this.addEventListener('search', (event) => {
+    //   window.alert('hi');
+    //   this.dispatchEvent(new CustomEvent('search', {detail: {type: 'births'}}));
+    // });
 
   }
 
