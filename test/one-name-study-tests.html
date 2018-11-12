@@ -23,15 +23,25 @@
     })
 
     test('callback from search event called', function() {
+      const resultSection = {appendChild: function() {}};
+      const appendChildSpy = sinon.stub(resultSection, 'appendChild');
       const createElementSpy = sinon.spy(document, 'createElement');
-
+      const resultsSpy = sinon.stub(el._root, 'querySelector').returns(resultSection);
 
       const event = new CustomEvent('search', {detail: {type: 'births'}});
 
       el.dispatchEvent(event);
 
       assert(createElementSpy.withArgs('me-one-name-study-births').calledOnce);
+      assert(resultsSpy.withArgs('#results').calledOnce);
+      assert(appendChildSpy.calledOnce);
+
+//      const container = this._root.querySelector('#container');
+ //     container.appendChild(conversation);
+
       createElementSpy.restore();
+      appendChildSpy.restore();
+      resultsSpy.restore();
     });
   });
 </script>

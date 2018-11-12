@@ -31,8 +31,9 @@ class MeOneNameStudy extends HTMLElement {
       <me-one-name-study-search id="search"></me-one-name-study-search>
       <p>Me One Name Study</p>
       <button id="births">Show Births</button>
+     
       <me-one-name-study-births id="ons"></me-one-name-study-births>
-      <section id="persons"></section>
+      <section id="results"></section>
     `;
 
      this._$persons = this._root.querySelector('#persons');
@@ -40,7 +41,10 @@ class MeOneNameStudy extends HTMLElement {
 
       this.addEventListener("search", (event) => {
 
-        const onsBirths = document.createElement(`me-one-name-study-${event.detail.type}` );
+        const onsBirths = document.createElement(`me-one-name-study-${event.detail.type}`);
+        const container = this._root.querySelector('#results');
+        container.appendChild(onsBirths);
+
       });
 
 
