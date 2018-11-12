@@ -39,9 +39,9 @@ class MeOneNameStudy extends HTMLElement {
      this._$ons = this._root.querySelector('#ons');
 
       this.addEventListener("search", (event) => {
-        
-        const onsBirths = document.createElement('me-one-name-study-births');
-      });     
+
+        const onsBirths = document.createElement(`me-one-name-study-${event.detail.type}` );
+      });
 
 
     // fetch(`http://www.martinetherton.com:9000/users`)
