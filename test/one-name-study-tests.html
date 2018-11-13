@@ -15,11 +15,11 @@
 
     setup(() => {
       el = document.getElementById('fixture');
-      spy = sinon.spy(el, 'addEventListener');
+  //    spy = sinon.spy(el, 'addEventListener');
     });
 
     teardown(() => {
-      spy.restore();
+ //     spy.restore();
     })
 
     test('callback from search event called', function() {

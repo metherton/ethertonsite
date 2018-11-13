@@ -11,15 +11,14 @@
 <script>
   suite('<me-one-name-study-search>', function() {
 
-    let el, spy;
+    let el;
 
     setup(() => {
       el = document.getElementById('fixture');
-      spy = sinon.spy(el, 'addEventListener');
     });
 
     teardown(() => {
-      spy.restore();
+
     })
 
 //    this._$redButton = this._root.querySelector("#redBtn");
@@ -31,25 +30,15 @@
  //     this.dispatchEvent(new CustomEvent('select-card', {detail: 'red'}));
  // });
 
-    test('callback from search event called', function() {
-      const searchBtn = {addEventListener: function() {}};
-      const addEventListenerSpy = sinon.stub(searchBtn, 'addEventListener');
-      const resultsSpy = sinon.stub(el._root, 'querySelector').returns(searchBtn);
+    test('callback from search button click called', function() {
+      const eventSpy = sinon.stub(el, 'dispatchEvent');
 
-      const event = new CustomEvent('search', {detail: {type: 'births'}});
+      const event = new CustomEvent('click', {});
 
-      el.dispatchEvent(event);
+      el._$searchButton.dispatchEvent(event);
 
-      assert(createElementSpy.withArgs('me-one-name-study-births').calledOnce);
-      assert(resultsSpy.withArgs('#results').calledOnce);
-      assert(appendChildSpy.calledOnce);
+      assert(eventSpy.calledOnce);
 
-//      const container = this._root.querySelector('#container');
- //     container.appendChild(conversation);
-
-      createElementSpy.restore();
-      appendChildSpy.restore();
-      resultsSpy.restore();
     });
   });
 </script>

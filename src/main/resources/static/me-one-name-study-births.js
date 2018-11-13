@@ -22,22 +22,23 @@ class MeOneNameStudyBirths extends HTMLElement {
 
 
 
-    // fetch(`http://www.martinetherton.com:9000/users`)
-    //   .then((response) => response.text())
-    //   .then((responseText) => {
-    //     this.render(JSON.parse(responseText));
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
+    fetch(`http://www.martinetherton.com:9000/users`)
+  //  fetch(`births.json`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        this.render(JSON.parse(responseText));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
   }
 
   render(userData) {
 
-    for (let i = 0; i < this._births.length; i += 1) {
+    for (let i = 0; i < userData.length; i += 1) {
       const user = document.createElement('p');
-      user.innerText = this._births.firstName;
+      user.innerText = userData[i].firstName;
       this._$persons.appendChild(user);
     }
     // this._$persons.innerText = 'hello';
