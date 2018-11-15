@@ -33,7 +33,6 @@ class MeOneNameStudyBirths extends HTMLElement {
 
   render(userData) {
     for (let i = 0; i < userData.length; i += 1) {
-   //   const user = document.createElement('p');
       const user = document.createElement('me-birth-record');
       this._$persons.appendChild(user);
       user.birth = userData[i];
