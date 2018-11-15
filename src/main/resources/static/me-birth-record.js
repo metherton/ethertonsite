@@ -11,6 +11,11 @@ class MeBirthRecord extends HTMLElement {
         .container {
           display: flex;
         }
+        good-map {
+          display: block;
+          width: 200px;
+          height: 150px;
+        }
       </style>
       <section class="container">
         <section>
@@ -20,7 +25,11 @@ class MeBirthRecord extends HTMLElement {
           <p id="dateOfBirth"></p>  
         </section>
         <section>
-          Map goes here
+          <good-map api-key="AIzaSyA-XiHqcr56619BrW1PZYzaTFnXVaMT6PY"
+               latitude="30"
+               longitude="-100" zoom="2"
+               map-options='{"mapTypeId": "satellite"}'>     
+          </good-map>
         </section>
       </section>
     `;
