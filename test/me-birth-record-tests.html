@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../bower_components/web-component-tester/browser.js"></script>
+  <script src="../src/main/resources/static/me-birth-record.js"></script>
+</head>
+<body>
+<me-birth-record id="fixture"></me-birth-record>
+<script>
+  suite('<me-birth-record>', function() {
+
+    let el;
+
+    setup(() => {
+      el = document.getElementById('fixture');
+  });
+
+    teardown(() => {
+
+    })
+
+//    this._$redButton = this._root.querySelector("#redBtn");
+//    this._$yellowButton = this._root.querySelector("#yellowBtn");
+//    this._$baseButton = this._root.querySelector("#baseBtn");
+//    this._$closeButton = this._root.querySelector("#closeBtn");
+
+//    this._$redButton.addEventListener('click', (event) => {
+    //     this.dispatchEvent(new CustomEvent('select-card', {detail: 'red'}));
+    // });
+
+    test('birth data shown in record', function() {
+      this._$firstName = this._root.querySelector("#firstName");
+      assert(this._$firstName.)
+
+    });
+  });
+</script>
+</body>
+</html>

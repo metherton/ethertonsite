@@ -19,9 +19,6 @@ class MeOneNameStudyBirths extends HTMLElement {
     `;
 
     this._$persons = this._root.querySelector('#persons');
-
-
-
     fetch(`http://www.martinetherton.com:9000/users`)
   //  fetch(`births.json`)
       .then((response) => response.text())
@@ -35,33 +32,14 @@ class MeOneNameStudyBirths extends HTMLElement {
   }
 
   render(userData) {
-
     for (let i = 0; i < userData.length; i += 1) {
-      const user = document.createElement('p');
-      user.innerText = userData[i].firstName;
+   //   const user = document.createElement('p');
+      const user = document.createElement('me-birth-record');
       this._$persons.appendChild(user);
-    }
-    // this._$persons.innerText = 'hello';
-  }
-
-  renderBirths() {
-    for (let i = 0; i < this._births.length; i += 1) {
-      const user = document.createElement('p');
-      user.innerText = this._births[i].firstName;
-      this._$persons.appendChild(user);
+      user.birth = userData[i];
     }
   }
 
-  // use setters and getters to create an API for the component
-  set births(data) {
-    if (this._births === data) return;
-    this._births = data;
-    this.renderBirths();
-  }
-
-  get births() {
-    return this._births;
-  }
 
 }
 
