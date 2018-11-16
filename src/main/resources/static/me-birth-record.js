@@ -12,22 +12,20 @@ class MeBirthRecord extends HTMLElement {
           display: flex;
           padding: 0.5em;
         }
+        
         good-map {
           display: block;
           width: 200px;
           height: 150px;
         }
-        
         .person {
           width: 50%;
           border: 1px solid black;
           padding: 0.5em;
         }
-        
         .map {
           border: 1px solid black;
-        }
-        
+        }   
       </style>
       <section class="container">
         <section class="person">
@@ -37,9 +35,8 @@ class MeBirthRecord extends HTMLElement {
           <p id="dateOfBirth"></p>  
         </section>
         <section class="map">
-          <good-map api-key="AIzaSyA-XiHqcr56619BrW1PZYzaTFnXVaMT6PY"
-               latitude="30"
-               longitude="-100" zoom="2"
+          <good-map api-key="AIzaSyA-XiHqcr56619BrW1PZYzaTFnXVaMT6PY"  
+                zoom="12"
                map-options='{"mapTypeId": "roadmap"}'>     
           </good-map>
         </section>
@@ -49,6 +46,7 @@ class MeBirthRecord extends HTMLElement {
     this._$surname = this._root.querySelector('#surname');
     this._$placeOfBirth = this._root.querySelector('#placeOfBirth');
     this._$dateOfBirth = this._root.querySelector('#dateOfBirth');
+    this._$goodMap = this._root.querySelector('good-map');
   }
 
   // use setters and getters to create an API for the component
@@ -76,6 +74,8 @@ class MeBirthRecord extends HTMLElement {
       if (this._$dateOfBirth) {
         this._$dateOfBirth.innerHTML = this._birth.dateOfBirth;
       }
+      this._$goodMap.setAttribute('latitude', '51.5175');
+      this._$goodMap.setAttribute('longitude', '-0.1307');
     }
   }
 
