@@ -19,8 +19,8 @@ class MeOneNameStudyBirths extends HTMLElement {
     `;
 
     this._$persons = this._root.querySelector('#persons');
-    //fetch(`http://www.martinetherton.com:9000/users`)
-    fetch(`births.json`)
+    fetch(`http://www.martinetherton.com:9000/users`)
+  //  fetch(`births.json`)
       .then((response) => response.text())
       .then((responseText) => {
         this.render(JSON.parse(responseText));
