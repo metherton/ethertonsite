@@ -10,25 +10,37 @@ class MeBirthRecord extends HTMLElement {
       <style>
         .container {
           display: flex;
+          padding: 0.5em;
         }
         good-map {
           display: block;
           width: 200px;
           height: 150px;
         }
+        
+        .person {
+          width: 50%;
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        
+        .map {
+          border: 1px solid black;
+        }
+        
       </style>
       <section class="container">
-        <section>
+        <section class="person">
           <p id="firstName"></p>
           <p id="surname"></p>
           <p id="placeOfBirth"></p>
           <p id="dateOfBirth"></p>  
         </section>
-        <section>
+        <section class="map">
           <good-map api-key="AIzaSyA-XiHqcr56619BrW1PZYzaTFnXVaMT6PY"
                latitude="30"
                longitude="-100" zoom="2"
-               map-options='{"mapTypeId": "satellite"}'>     
+               map-options='{"mapTypeId": "roadmap"}'>     
           </good-map>
         </section>
       </section>
