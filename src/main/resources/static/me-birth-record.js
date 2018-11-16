@@ -74,8 +74,8 @@ class MeBirthRecord extends HTMLElement {
       if (this._$dateOfBirth) {
         this._$dateOfBirth.innerHTML = this._birth.dateOfBirth;
       }
-      this._$goodMap.setAttribute('latitude', '51.5175');
-      this._$goodMap.setAttribute('longitude', '-0.1307');
+      this._$goodMap.setAttribute('latitude', this._birth.latitude || '51.5175');
+      this._$goodMap.setAttribute('longitude', this._birth.longitude || '-0.1307');
     }
   }
 
