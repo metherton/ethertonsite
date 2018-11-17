@@ -16,7 +16,7 @@ class MeBirthRecord extends HTMLElement {
         good-map {
           display: block;
           width: 200px;
-          height: 150px;
+          height: 130px;
         }
         .person {
           width: 50%;
@@ -29,8 +29,7 @@ class MeBirthRecord extends HTMLElement {
       </style>
       <section class="container">
         <section class="person">
-          <p id="firstName"></p>
-          <p id="surname"></p>
+          <p><span id="firstName"></span>&nbsp;<span id="surname"></span></p>
           <p id="placeOfBirth"></p>
           <p id="dateOfBirth"></p>  
         </section>
