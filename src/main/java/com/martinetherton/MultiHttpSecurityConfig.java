@@ -17,7 +17,6 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 @EnableWebSecurity
 public class MultiHttpSecurityConfig {
 
-
     @Bean
     public UserDetailsService userDetailsService() throws Exception {
         // ensure the passwords are encoded properly
